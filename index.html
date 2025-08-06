@@ -1,65 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>NATURE - THE PHYSICAL UNIVERSE</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <title>CRUD Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <div class="header-img-container">
-      <img src="img/header.jpg" alt="Leaves Header" class="header-img">
-      <div class="header-text">
-        <span class="main-title">NATURE</span><br>
-        <span class="subtitle">THE PHYSICAL UNIVERSE</span>
-      </div>
-    </div>
-    <div class="main-content">
-      <div class="left-panel">
-        <h2 class="section-title nature">NATURE</h2>
-        <p>Nature, in the broadest sense, is the natural world, physical universe, material world or material universe. "Nature" refers to the phenomena of the physical world, and also to life in general. Manufactured objects and human interaction are, in common usage, not considered part of nature unless qualified in ways such as "human nature" or "the whole of nature". Nature is generally distinguished from the supernatural. It ranges in scale from the subatomic to the galactic.</p>
-        <h2 class="section-title earth">EARTH</h2>
-        <p>Earth (or, "the earth") the fifth largest planet in the solar system, third in order of distance from the Sun. It is the largest of its planetary system's terrestrial planets and the only place in the universe known to support life.</p>
-        <p>The most prominent features of the earth's climate are its two large polar regions, two relatively narrow temperate zones, and a wide equatorial tropical to subtropical region. Precipitation patterns vary widely according to location, ranging from several metres of water per year to less than a millimetre. About 70 percent of the surface is covered by salt-water oceans. The remainder consists of continents and islands, with the vast majority of the inhabited land in the Northern Hemisphere.</p>
-        <h2 class="section-title life">LIFE</h2>
-        <p>Although there is no universal agreement on the definition of life, scientists generally accept that the biological manifestation of life is characterized by organization, metabolism, growth, adaptation, response to stimuli and reproduction. Life may also be said to be simply the characteristic state of organisms.</p>
-      </div>
-      <div class="right-panel">
-        <div class="see-also">
-          <span>See also</span>
-          <input type="text" class="search-box" placeholder="">
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title">Science:</div>
-          <ul>
-            <li><a href="#">Natural history</a></li>
-            <li><a href="#">Natural philosophy</a></li>
-            <li><a href="#">Natural science</a></li>
-          </ul>
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title">Philosophy:</div>
-          <ul>
-            <li><a href="#">Nature (philosophy)</a></li>
-            <li><a href="#">Mother Nature</a></li>
-            <li><a href="#">Naturalism (philosophy)</a></li>
-          </ul>
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title">Organizations:</div>
-          <ul>
-            <li><a href="#">The Nature Conservancy</a></li>
-            <li><a href="#">Nature Detectives</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <img src="img/footer.jpg" alt="Footer Background" class="footer-bg">
-      <div class="copyright">&copy; Copyright 2008 Wikipedia</div>
-    </div>
-  </div>
+  <form action="register.php" method="POST" class="form">
+    <h2>Responsive Registration Form</h2>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+
+    <label><input type="radio" name="gender" value="Male" required> Male</label>
+    <label><input type="radio" name="gender" value="Female" required> Female</label>
+
+    <select name="country" required>
+      <option value="">Select a country</option>
+      <option value="Ghana">Ghana</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Kenya">Kenya</option>
+    </select>
+
+    <label><input type="checkbox" name="terms" required> I agree with terms and conditions</label>
+    <label><input type="checkbox" name="newsletter"> I want to receive the newsletter</label>
+
+    <button type="submit">Register</button>
+
+    <p class="developed-by">Developed by <strong>GAMBO</strong></p>
+    <p style="text-align: center; margin-top: 10px;">
+      <a href="view.php" style="color: #f1b600; text-decoration: none;">View Registered Users</a>
+    </p>
+  </form>
 </body>
-</html> 
+</html>
